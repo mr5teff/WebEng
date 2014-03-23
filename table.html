@@ -15,19 +15,30 @@ http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <nav>Anmelden</nav>
 <section>
 <div id="stats">
-<span id="player1">Spieler 1<img src="img/correct-white.png" alt="Korrekt" /><img></img></span>
-<span id ="player2">Spieler 2</span>
+<span id="player1">Spieler 1<br /><img src="img/correct-white.png" alt="Korrekt" id="p1q1" /><img src="img/incorrect-white.png" alt="Falsch" id="p1q2" /><img src="img/unknown-white.png" alt="Unbekannt" id="p1q3" /></span>
+<span id="player2">Spieler 2<br /><img src="img/correct-white.png" alt="Korrekt" id="p2q1" /><img src="img/correct-white.png" alt="Korrekt" id="p2q2" /><img src="img/unknown-white.png" alt="Unbekannt" id="p2q3" /></span>
 <h2>EWA</h2>
 </div>
 <div id="question">
 Welche zwei LVAs werden im Modul EWA zusammengefasst?
 <ul>
-<li>IT Strategie</li>
-<li>Web Engineering</li>
-<li>Semistrukturierte Daten</li>
-<li>Objektorientiere Modellierung</li>
+<li class="inactive_answer">IT Strategie</li>
+<li class="inactive_answer">Web Engineering</li>
+<li class="inactive_answer">Semistrukturierte Daten</li>
+<li class="inactive_answer">Objektorientiere Modellierung</li>
 </ul>
-weiter<br \>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$('li').click(function() {
+		$(this).toggleClass('inactive_answer active_answer');
+	});
+}
+
+</script>
+
+<span id="continue">weiter <img src="img/white-arrow-right.png" alt="" /></span><br \>
 </div>
 <div id="counter">Verbleibende Zeit: <span id="timer"></span><br />
 
@@ -35,7 +46,7 @@ weiter<br \>
 
 var count=30;
 
-var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+var counter=setInterval(timer, 1000);
 
 function timer()
 
