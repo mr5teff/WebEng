@@ -28,9 +28,9 @@ header nav .navbutton {
 	text-align: center;
 	background-color: #D6B33E;
 	width: 8em;
-	border-radius: 1.5em;
+	border-radius: 0.5em;
 	padding: 0.25em;
-	border: 1.10em solid #191C61;
+	margin: 1.10em;
 }
 header nav a {
 	color: white;
