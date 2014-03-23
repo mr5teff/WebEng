@@ -22,16 +22,18 @@ http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <div id="question">
 Welche zwei LVAs werden im Modul EWA zusammengefasst?
 <ul>
-<li class="inactive_answer" onclick="select_answer()">IT Strategie</li>
-<li class="inactive_answer" onclick="select_answer()">Web Engineering</li>
-<li class="inactive_answer" onclick="select_answer()">Semistrukturierte Daten</li>
-<li class="inactive_answer" onclick="select_answer()">Objektorientiere Modellierung</li>
+<li class="inactive_answer">IT Strategie</li>
+<li class="inactive_answer">Web Engineering</li>
+<li class="inactive_answer">Semistrukturierte Daten</li>
+<li class="inactive_answer">Objektorientiere Modellierung</li>
 </ul>
 
 <script type="text/javascript">
-function select_answer()
-{
-document.getElementByClass("inactive_answer").className = "active_answer"; // ich weiss dass das noch nicht richtig funktioniert
+
+$(document).ready(function() {
+	$('li').click(function() {
+		$(this).toggleClass('inactive_answer active_answer');
+	});
 }
 
 </script>
