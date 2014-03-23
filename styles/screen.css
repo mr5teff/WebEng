@@ -1,20 +1,25 @@
+
+
 body { 
 	background-image:url('../img/style1-background.png');
 }
 header {
-	background-color:#191C61;
+	background-color: #191C61;
 }
 header #logo {
+	display: table;
+}
+header #logo img {
+	vertical-align: middle;
+	display: table-cell;
+	padding: 0.5em;
+}
+header #logo span {
+	font-size: 1.5em;
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
-}
-header #logo #logoBild {
-	display: inline;
+	display: table-cell;
 	vertical-align: middle;
 }
-header #logo #logoText {
-	display: inline;
-}
-header #logo #logoText h1 {
-	display: inline;
+header nav {
 }
