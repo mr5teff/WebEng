@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Business Informatics Group Quiz</title>
+<link rel="stylesheet" type="text/css" href="styles/screen.css" />
+
+</head>
+<body>
+<header><img src="img/big-logo-small.png"></img><h1>Quiz</h1></header>
+<nav>Anmelden</nav>
+<article>
+<h2>EWA</h2>
+Welche zwei LVAs werden im Modul EWA zusammengefasst?
+<ul>
+<li>
+<li>
+<li>
+<li>
+</ul>
+Verbleibende Zeit:
+
+
+<meter min="0" max="30" id="time">Zeit</meter><br>
+
+<script type ="text/javascript">
+
+var count=30;
+
+var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+
+function timer()
+
+{
+  count=count-1;
+
+document.getElementById('time').setAttribute('value', count);
+
+  if (count <= 0)
+  {
+     count = 30
+     return;
+  }
+
+  //Do code for showing the number of seconds here
+}
+
+    </script>
+Letztes Spiel: Nie
+</article>
+<footer>&#169;2014 BIG Quiz</footer>
+</body>
+</html>

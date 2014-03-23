@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Business Informatics Group Quiz</title>
+</head>
+<body>
+
+<h1>Persönliche Daten</h1>
+
+<form action="">
+Vorname: <input type="text" name="vorname"><br>
+Nachname: <input type="text" name="nachname"><br>
+Geburtstag: <input type="text" name="geburtstag"><br> <!-- Datumsvalidierung -->
+Geschlecht: 
+<select name="geschlecht">
+	<option value="maennlich">Männlich</option>
+	<option value="weiblich">Weiblich</option>
+</select>
+</form>
+
+<h1>Login Daten</h1>
+
+<form>
+Benutzername*: <input type="text" name="benutzername"><br> <!-- min 4 & max 8 Zeichen -->
+Passwort*: <input type="password" name="passwort"><br> <!-- min 4 & max 8 Zeichen -->
+</form>
+
+<button type="button" onclick="displayDate()">Registrieren</button>
+
+<p id="demo">bla</p>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("input").change(function(){
+
+
+
+    alert("The text has been changed.");
+  });
+});
+</script>
+
+Mit "*" gekennzeichnete Felder sind Pflichtfelder
+
+<br>© 2014 BIG Quiz
+
+</body>
+</html>
