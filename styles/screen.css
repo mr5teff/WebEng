@@ -1,5 +1,3 @@
-
-
 body { 
 	background-image:url('../img/style1-background.png');
 }
@@ -7,7 +5,7 @@ header {
 	background-color: #191C61;
 }
 header #logo {
-	display: table;
+	display: inline-table;
 }
 header #logo img {
 	vertical-align: middle;
@@ -15,11 +13,32 @@ header #logo img {
 	padding: 0.5em;
 }
 header #logo span {
-	font-size: 1.5em;
+	font-size: 2em;
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
 	display: table-cell;
 	vertical-align: middle;
-}
+} 
 header nav {
+	display: block;
+	float: right;
+} 
+header nav .navbutton {
+	text-align: center;
+	background-color: #D6B33E;
+	width: 8em;
+	border-radius: 1.5em;
+	padding: 0.25em;
+	border: 1.10em solid #191C61;
 }
+header nav a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+h1 {
+	margin-top: 0px;
+}
+
