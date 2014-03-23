@@ -5,24 +5,31 @@ http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <head>
 <title>Business Informatics Group Quiz</title>
 <link rel="stylesheet" type="text/css" href="styles/screen.css" />
-
+<script type="text/javascript" src="js/jquery.js">
+</script>
+<script type="text/javascript" src="js/framework.js">
+</script>
 </head>
 <body>
 <header><img src="img/big-logo-small.png"></img><h1>Quiz</h1></header>
 <nav>Anmelden</nav>
-<article>
+<section>
+<div id="stats">
+<span id="player1">Spieler 1<img src="img/correct-white.png" alt="Korrekt" /><img></img></span>
+<span id ="player2">Spieler 2</span>
 <h2>EWA</h2>
+</div>
+<div id="question">
 Welche zwei LVAs werden im Modul EWA zusammengefasst?
 <ul>
-<li>
-<li>
-<li>
-<li>
+<li>IT Strategie</li>
+<li>Web Engineering</li>
+<li>Semistrukturierte Daten</li>
+<li>Objektorientiere Modellierung</li>
 </ul>
-Verbleibende Zeit:
-
-
-<meter min="0" max="30" id="time">Zeit</meter><br>
+weiter<br \>
+</div>
+<div id="counter">Verbleibende Zeit: <span id="timer"></span><br />
 
 <script type ="text/javascript">
 
@@ -35,20 +42,23 @@ function timer()
 {
   count=count-1;
 
-document.getElementById('time').setAttribute('value', count);
-
   if (count <= 0)
   {
      count = 30
      return;
   }
 
-  //Do code for showing the number of seconds here
-}
+document.getElementById('time').setAttribute('value', count);
+document.getElementById("timer").innerHTML=secToMMSS(count);
 
-    </script>
+}
+</script>
+
+<meter min="0" max="30" value="30" id="time">Zeit</meter><br>
+
 Letztes Spiel: Nie
-</article>
+</div>
+</section>
 <footer>&#169;2014 BIG Quiz</footer>
 </body>
 </html>
