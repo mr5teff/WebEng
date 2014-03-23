@@ -14,6 +14,7 @@ header #logo img {
 }
 header #logo span {
 	font-size: 2em;
+	font-weight: bold;
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
 	display: table-cell;
