@@ -1,3 +1,12 @@
 body { 
 	background-image:url('../img/style1-background.png');
 }
+header h1 {
+	display: inline;
+	color: white;
+	font-family: georgia, sans-serif;
+}
+
+header {
+	background-color:#191C61;
+}
