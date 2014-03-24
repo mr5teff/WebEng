@@ -17,38 +17,60 @@ http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 	<nav>
 		<a href="">
 			<div class="navbutton">
-				Abmelden
+				Anmelden
 			</div>
 		</a>
 	</nav>
 </header>
 
-<h1>Pers&ouml;nliche Daten</h1>
+<section id="content">
 
-<form action="" method="post">
+	<h1>Pers&ouml;nliche Daten</h1>
 
-	Vorname:
-	<input type="text" name="vorname"><br>
-	Nachname:
-	<input type="text" name="nachname"><br>
-	Geburtstag:
-	<input type="text" id="geburtstag" name="geburtstag"><br> <!-- Datumsvalidierung -->
-	Geschlecht: 
-	<select name="geschlecht">
-		<option value="maennlich">M&auml;nnlich</option>
-		<option value="weiblich">Weiblich</option>
-	</select>
+	<form action="" method="post">
+		<label>
+			<span>Vorname:</span>
+			<input type="text" name="vorname">
+		</label>
+		<label>
+			<span>Nachname:</span>
+			<input type="text" name="nachname">
+		</label>
+		<label>
+			<span>Geburtstag:</span>
+			<input type="text" id="geburtstag" name="geburtstag"> <!-- Datumsvalidierung -->
+		</label>
+		<label>
+			<span>Geschlecht:</span> 
+			<select name="geschlecht">
+				<option value="maennlich">M&auml;nnlich</option>
+				<option value="weiblich">Weiblich</option>
+			</select>
+		</label>
 
-	<h1>Login Daten</h1>
+		<h1>Login Daten</h1>
 
-	Benutzername*:
-	<input type="text" id="benutzername" name="benutzername" onkeyup="checkBenutzer()"><br>
-	Passwort*:
-	<input type="password" id="passwort" name="passwort" onkeyup="checkPasswort()"><br>
+		<label>
+			<span>Benutzername*:</span>
+			<input type="text" id="benutzername" name="benutzername" onkeyup="checkBenutzer()">
+		</label>
+		<label>
+			<span>Passwort*:</span>
+			<input type="password" id="passwort" name="passwort" onkeyup="checkPasswort()">
+		</label>
 
-	<input type="submit" id="submitButton" value="Registrieren" disabled>
+		<div id="submit">
+			<input type="submit" id="submitButton" value="Registrieren" disabled>
+		</div>
+	</form>
+	
+	<div id="pflichtfelder">
+		<span>
+			Mit "*" gekennzeichnete Felder sind Pflichtfelder	
+		</span>
+	</div>
 
-</form>
+</section>
 
 
 
@@ -89,9 +111,7 @@ function updateButton() {
 </script>
 
 
-Mit "*" gekennzeichnete Felder sind Pflichtfelder
-
-<br>&copy; 2014 BIG Quiz
+<footer><span>&#169;2014 BIG Quiz</span></footer>
 
 </body>
 </html>
