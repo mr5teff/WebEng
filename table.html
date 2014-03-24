@@ -65,8 +65,6 @@ http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 			<li class="inactive_answer">Semistrukturierte Daten</li>
 			<li class="inactive_answer">Objektorientiere Modellierung</li>
 		</ul>
-	
-		<span id="continue">weiter <img src="img/white-arrow-right.png" alt="" /></span>
 
 		<script type="text/javascript">
 
@@ -78,34 +76,37 @@ http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 		</script>
 	
+		<button id="continue">weiter <img src="img/white-arrow-right.png" alt="" /></button>
+
 </div>
 
-<div id="counter">Verbleibende Zeit: <span id="timer"></span>
+<div id="counter">Verbleibende Zeit: <span id="time_text">00:30</span>
 
-	<script type ="text/javascript">
-
-	var count=30;
-
-	var counter=setInterval(timer, 1000);
-
-	function timer()
-
-	{
-	  count=count-1;
-
-	  if (count <= 0)
-	  {
-		 count = 30
-		 return;
-	  }
-
-	document.getElementById('time').setAttribute('value', count);
-	document.getElementById("timer").innerHTML=secToMMSS(count);
-
-	}
-	</script>
-
-	<meter min="0" max="30" value="30" id="time">Zeit</meter>
+	<meter min="0" max="30" value="30" id="time_meter">Zeit</meter>
+	
+			<script type="text/javascript">
+	
+		$(document).ready(function(){
+		
+			var count=30;
+		
+			setInterval(function(){
+		
+				count = count-1;
+				
+				if(count <= 0){
+					count = 30;
+					return;
+				}
+		
+				$('#time_meter').prop('value', count);
+				$('#time_text').html(secToMMSS(count));
+		
+			}, 1000);
+		
+		});
+	
+		</script>
 
 	<span>Letztes Spiel: Nie</span>
 </div>
