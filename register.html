@@ -23,41 +23,69 @@ http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 <h1>Pers&ouml;nliche Daten</h1>
 
-<form action="">
-Vorname: <input type="text" name="vorname"><br>
-Nachname: <input type="text" name="nachname"><br>
-Geburtstag: <input type="text" name="geburtstag"><br> <!-- Datumsvalidierung -->
-Geschlecht: 
-<select name="geschlecht">
-	<option value="maennlich">M&auml;nnlich</option>
-	<option value="weiblich">Weiblich</option>
-</select>
+<form action="" method="post">
+
+	Vorname:
+	<input type="text" name="vorname"><br>
+	Nachname:
+	<input type="text" name="nachname"><br>
+	Geburtstag:
+	<input type="text" id="geburtstag" name="geburtstag"><br> <!-- Datumsvalidierung -->
+	Geschlecht: 
+	<select name="geschlecht">
+		<option value="maennlich">M&auml;nnlich</option>
+		<option value="weiblich">Weiblich</option>
+	</select>
+
+	<h1>Login Daten</h1>
+
+	Benutzername*:
+	<input type="text" id="benutzername" name="benutzername" onkeyup="checkBenutzer()"><br>
+	Passwort*:
+	<input type="password" id="passwort" name="passwort" onkeyup="checkPasswort()"><br>
+
+	<input type="submit" id="submitButton" value="Registrieren" disabled>
+
 </form>
 
-<h1>Login Daten</h1>
-
-<form>
-Benutzername*: <input type="text" name="benutzername"><br> <!-- min 4 & max 8 Zeichen -->
-Passwort*: <input type="password" name="passwort"><br> <!-- min 4 & max 8 Zeichen -->
-</form>
-
-<button type="button" onclick="displayDate()">Registrieren</button>
-
-<p id="demo">bla</p>
 
 
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-</script>
+<script src="js/jquery.js"></script>
 <script>
-$(document).ready(function(){
-  $("input").change(function(){
 
+var benutzerValid=new Boolean(0);
+var passwortValid=new Boolean(0);
 
-    alert("The text has been changed.");
-  });
-});
+function checkBenutzer() {
+	var text=document.getElementById("benutzername").value;
+	benutzerValid = checkStringLength(text);	
+	updateButton();	
+}
+
+function checkPasswort() {
+	var text=document.getElementById("passwort").value;
+	passwortValid = checkStringLength(text);	
+	updateButton();	
+}
+
+function checkStringLength(text) {
+	if(text.length >= 4 && text.length <= 8) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function updateButton() {
+	if(benutzerValid==true && passwortValid==true) {
+		document.getElementById("submitButton").disabled = false;
+	} else {
+		document.getElementById("submitButton").disabled = true;
+	}
+}
+
 </script>
+
 
 Mit "*" gekennzeichnete Felder sind Pflichtfelder
 
