@@ -150,7 +150,7 @@ footer {
 
 }
 
-#question .inactive_answer {
+#question .active_answer {
 	font-family: Arial, Helvetica, sans-serif;
 	display: inline-block;
 	color: white;
@@ -161,7 +161,7 @@ footer {
 	padding: 1.5em;
 	margin: 0.25em;
 }
-#question .active_answer {
+#question .inactive_answer {
 	font-family: Arial, Helvetica, sans-serif;
 	color: #191C61;
 	display: inline-block;
