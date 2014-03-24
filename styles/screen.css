@@ -61,12 +61,12 @@ footer {
 	width: 80%;	
 	
 }
-#content {
+#registerContent {
 	margin-left: auto;
 	margin-right: auto;
 	width: 60%;
 }
-#content form label span {
+#registerContent form label span {
 	margin-bottom: 1em;
 	width: 30%;
 	display: inline-block;
@@ -93,7 +93,7 @@ footer {
 	background-position: 92% 50%;
 	background-repeat: no-repeat;
 }
-#content form label input {
+#registerContent form label input {
 	margin-bottom: 1.5em;
 	padding: 0.25em;
 	border-radius: 0.25em;
@@ -101,12 +101,46 @@ footer {
 	display: inline-block;
 	width: 69%;
 }
-#content form label select {
+#registerContent form label select {
 	display: inline-block;
 	border-radius: 0.25em;
 	padding: 0.25em;
 	border: 1px solid black;
 	width: 69%;
+}
+#tableContent {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#stats {
+	display: inline;
+}
+#stats h2 {
+	display: inline-block;
+	text-align: center;
+	width: 78%;
+}
+.player .playerName {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+.player .answerIcons {
+	display: inline-block;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.player .answerIcons img {
+}
+#player1 {
+	display: inline-block;
+	width: 10%;
+}
+#player2 {
+	display: inline-block;
+	width: 10%;
 }
 
 

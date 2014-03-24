@@ -27,59 +27,75 @@ http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 	</nav>
 </header>
 
-<section>
-<div id="stats">
-<span id="player1">Spieler 1<br /><img src="img/correct-white.png" alt="Korrekt" id="p1q1" /><img src="img/incorrect-white.png" alt="Falsch" id="p1q2" /><img src="img/unknown-white.png" alt="Unbekannt" id="p1q3" /></span>
-<span id="player2">Spieler 2<br /><img src="img/correct-white.png" alt="Korrekt" id="p2q1" /><img src="img/correct-white.png" alt="Korrekt" id="p2q2" /><img src="img/unknown-white.png" alt="Unbekannt" id="p2q3" /></span>
-<h2>EWA</h2>
+<section id="tableContent">
+	<div id="stats">
+		<div class="player" id="player1">
+			<span class="playerName">Spieler 1</span>
+			<span class= "answerIcons">
+				<img src="img/correct-white.png" alt="Korrekt" id="p1q1" />
+				<img src="img/incorrect-white.png" alt="Falsch" id="p1q2" />
+				<img src="img/unknown-white.png" alt="Unbekannt" id="p1q3" />
+			</span>
+		</div>
+		<span><h2>EWA</h2></span>
+		<div class="player" id="player2">
+			<span class="playerName">Spieler 2</span>
+			<span class="answerIcons">
+				<img src="img/correct-white.png" alt="Korrekt" id="p2q1" />
+				<img src="img/correct-white.png" alt="Korrekt" id="p2q2" />
+				<img src="img/unknown-white.png" alt="Unbekannt" id="p2q3" />
+			</span>
+		</div>
+	</div>
+
+	<div id="question">
+		<h2>Welche zwei LVAs werden im Modul EWA zusammengefasst?</h2>
+		<ul>
+			<li class="inactive_answer">IT Strategie</li>
+			<li class="inactive_answer">Web Engineering</li>
+			<li class="inactive_answer">Semistrukturierte Daten</li>
+			<li class="inactive_answer">Objektorientiere Modellierung</li>
+		</ul>
+	
+		<span id="continue">weiter <img src="img/white-arrow-right.png" alt="" /></span>
+
+		<script type="text/javascript">
+
+		$(document).ready(function() {
+			$('li').click(function() {
+				$(this).toggleClass('inactive_answer active_answer');
+			});
+		}
+
+		</script>
 </div>
-<div id="question">
-Welche zwei LVAs werden im Modul EWA zusammengefasst?
-<ul>
-<li class="inactive_answer">IT Strategie</li>
-<li class="inactive_answer">Web Engineering</li>
-<li class="inactive_answer">Semistrukturierte Daten</li>
-<li class="inactive_answer">Objektorientiere Modellierung</li>
-</ul>
 
-<script type="text/javascript">
+<div id="counter">Verbleibende Zeit: <span id="timer"></span>
 
-$(document).ready(function() {
-	$('li').click(function() {
-		$(this).toggleClass('inactive_answer active_answer');
-	});
-}
+	<script type ="text/javascript">
 
-</script>
+	var count=30;
 
-<span id="continue">weiter <img src="img/white-arrow-right.png" alt="" /></span><br \>
-</div>
-<div id="counter">Verbleibende Zeit: <span id="timer"></span><br />
+	var counter=setInterval(timer, 1000);
 
-<script type ="text/javascript">
+	function timer()
 
-var count=30;
+	{
+	  count=count-1;
 
-var counter=setInterval(timer, 1000);
+	  if (count <= 0)
+	  {
+		 count = 30
+		 return;
+	  }
 
-function timer()
+	document.getElementById('time').setAttribute('value', count);
+	document.getElementById("timer").innerHTML=secToMMSS(count);
 
-{
-  count=count-1;
+	}
+	</script>
 
-  if (count <= 0)
-  {
-     count = 30
-     return;
-  }
-
-document.getElementById('time').setAttribute('value', count);
-document.getElementById("timer").innerHTML=secToMMSS(count);
-
-}
-</script>
-
-<meter min="0" max="30" value="30" id="time">Zeit</meter><br>
+	<meter min="0" max="30" value="30" id="time">Zeit</meter>
 
 Letztes Spiel: Nie
 </div>
