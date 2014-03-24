@@ -1,21 +1,15 @@
 body { 
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
 	background-image:url('../img/style1-background.png');
 }
 header {
 	background-color: #191C61;
 }
-span {
-	font-family: Arial, Helvetica, sans-serif;
-	color: white;
-}
 h1 {
-	font-family: Arial, Helvetica, sans-serif;
-	color: white;
 	font-size: 1.5em;
 }
 h2 {
-	font-family: Arial, Helvetica, sans-serif;
-	color: white;
 	font-size: 1.25em;
 }
 header #logo {
@@ -36,8 +30,6 @@ header #logo span {
 	vertical-align: middle;
 	font-size: 2em;
 	font-weight: bold;
-	color: white;
-	font-family: Arial, Helvetica, sans-serif;
 } 
 header nav .navbutton {
 	position: absolute;
@@ -51,10 +43,8 @@ header nav .navbutton {
 	margin: 1.1em;
 }
 header nav a {
-	color: white;
 	font-weight: bold;
 	text-decoration: none;
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1em;
 }
 footer {
@@ -82,9 +72,7 @@ footer {
 	text-align: right;
 }
 #submit input {
-	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
-	color: white;
 	font-size: 1em;
 	display: inline-block;
 	text-align: center;
@@ -138,38 +126,35 @@ footer {
 	margin-right: auto;
 }
 #question h2 {
-	color: white;
-	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
 	font-weight: normal;
 	width: 78%;
 	margin-left: auto;
 	margin-right: auto;
 }
-#question #answers {
-
+#question {
+	text-align: center;
 }
-
+#continue {
+	text-align: right;
+}
 #question .active_answer {
-	font-family: Arial, Helvetica, sans-serif;
 	display: inline-block;
-	color: white;
 	text-align: center;
 	background-color: #191C61;
 	width: 40%;
 	border-radius: 0.25em;
-	padding: 1.5em;
+	padding: 1em;
 	margin: 0.25em;
 }
 #question .inactive_answer {
-	font-family: Arial, Helvetica, sans-serif;
 	color: #191C61;
 	display: inline-block;
 	text-align: center;
 	background-color: #C5DFED;
 	width: 40%;
 	border-radius: 0.25em;
-	padding: 1.5em;
+	padding: 1em;
 	margin: 0.25em;
 }
 #player1 {
