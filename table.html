@@ -58,6 +58,17 @@ http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 	<div id="question">
 		<h2>Welche zwei LVAs werden im Modul EWA zusammengefasst?</h2>
+		
+		<script type="text/javascript">
+
+		$(document).ready(function() {
+			$('li').click(function() {
+				$(this).toggleClass('inactive_answer active_answer');
+			});
+		});
+
+		</script>
+		
 		<ul>
 			<li class="inactive_answer">IT Strategie</li>
 			<li class="inactive_answer">Web Engineering</li>
@@ -76,6 +87,7 @@ http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 		});
 
 		</script>
+
 </div>
 
 <div id="counter">Verbleibende Zeit: <span id="timer"></span>
