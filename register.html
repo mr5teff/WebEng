@@ -52,11 +52,11 @@ http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 		<label>
 			<span>Benutzername*:</span>
-			<input type="text" id="benutzername" name="benutzername" onkeyup="checkBenutzer()">
+			<input type="text" id="benutzername" name="benutzername" onkeyup="validateInput()">
 		</label>
 		<label>
 			<span>Passwort*:</span>
-			<input type="password" id="passwort" name="passwort" onkeyup="checkPasswort()">
+			<input type="password" id="passwort" name="passwort" onkeyup="validateInput()">
 		</label>
 
 		<div id="submit">
@@ -77,19 +77,19 @@ http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <script src="js/jquery.js"></script>
 <script>
 
-var benutzerValid=new Boolean(0);
-var passwortValid=new Boolean(0);
-
-function checkBenutzer() {
+function validateInput() {
 	var text=document.getElementById("benutzername").value;
 	benutzerValid = checkStringLength(text);	
-	updateButton();	
-}
 
-function checkPasswort() {
 	var text=document.getElementById("passwort").value;
-	passwortValid = checkStringLength(text);	
-	updateButton();	
+	passwortValid = checkStringLength(text);		
+	
+	if(benutzerValid==true && passwortValid==true) {
+		document.getElementById("submitButton").disabled = false;
+	} else {
+		document.getElementById("submitButton").disabled = true;
+	}
+	
 }
 
 function checkStringLength(text) {
@@ -97,14 +97,6 @@ function checkStringLength(text) {
 		return true;
 	} else {
 		return false;
-	}
-}
-
-function updateButton() {
-	if(benutzerValid==true && passwortValid==true) {
-		document.getElementById("submitButton").disabled = false;
-	} else {
-		document.getElementById("submitButton").disabled = true;
 	}
 }
 
