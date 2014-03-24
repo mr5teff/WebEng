@@ -78,9 +78,20 @@ footer {
 	text-align: right;
 }
 #submit input {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: white;
+	font-size: 1em;
 	display: inline-block;
 	text-align: center;
-	width: 8em;
+	width: 10em;
+	padding: 0.25em;
+	border-radius: 0.25em;
+	border: solid green 1px;
+	background-image: url("../img/white-arrow-right.png");
+	background-size: 5%;
+	background-position: 92% 50%;
+	background-repeat: no-repeat;
 }
 #content form label input {
 	margin-bottom: 1.5em;
