@@ -69,6 +69,21 @@ footer {
 	width: 30%;
 	display: inline-block;
 }
+#registerContent form label input {
+	margin-bottom: 1.5em;
+	padding: 0.25em;
+	border-radius: 0.25em;
+	border: 1px solid black;
+	display: inline-block;
+	width: 69%;
+}
+#registerContent form label select {
+	display: inline-block;
+	border-radius: 0.25em;
+	padding: 0.25em;
+	border: 1px solid black;
+	width: 69%;
+}
 #pflichtfelder {
 	text-align: center;
 }
@@ -94,21 +109,6 @@ footer {
 }
 #submit #submitButton:disabled {
 	background-color: #CFCFCF;
-}
-#registerContent form label input {
-	margin-bottom: 1.5em;
-	padding: 0.25em;
-	border-radius: 0.25em;
-	border: 1px solid black;
-	display: inline-block;
-	width: 69%;
-}
-#registerContent form label select {
-	display: inline-block;
-	border-radius: 0.25em;
-	padding: 0.25em;
-	border: 1px solid black;
-	width: 69%;
 }
 #tableContent {
 	margin-top: 1em;
@@ -139,6 +139,12 @@ footer {
 	min-width: 20px;
 	margin-left: 0.2em;
 	margin-right: 0.2em;
+}
+#player1 {
+	float: left;
+}
+#player2 {
+	float: right;
 }
 #stats span h1 {
 	display: inline-block;
@@ -200,6 +206,7 @@ footer {
 	width: 100%
 }
 #continue {
+	float:right;
 	margin-top: 1em;
 	width: 50%;
 	display: inline-block;
@@ -223,5 +230,42 @@ footer {
 	background-size: 10%;
 	background-position: 92% 50%;
 	background-repeat: no-repeat;
+}
+@media (min-width: 48em) and (max-width: 64em) {
+	#registerContent {
+		width:60%;
+	}
+}
+@media (min-width: 32em) and (max-width: 48em) {
+	#registerContent {
+		width:80%;
+	}
+}
+@media (max-width: 32em) {
+	#registerContent {
+		width:100%;
+	}
+	#tableContent {
+		width: 90%;
+	}
+	header nav .navbutton {
+		width: 6em;
+	}
+	#registerContent form label span {
+		width: 30%;
+		display: block;
+		margin-bottom: 0.2em;
+	}
+	#registerContent form label input {
+		width: 99%;
+		display: block;
+		border-radius: 0.25em;
+	}
+	#registerContent form label select {
+		display: inline-block;
+		border-radius: 0.25em;
+		border: 1px solid black;
+		width: 99%;
+	}
 }
 
