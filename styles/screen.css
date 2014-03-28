@@ -246,6 +246,7 @@ footer {
 		width:100%;
 	}
 	#tableContent {
+		text-align: center;
 		width: 90%;
 	}
 	header nav .navbutton {
@@ -266,6 +267,78 @@ footer {
 		border-radius: 0.25em;
 		border: 1px solid black;
 		width: 99%;
+	}
+	#stats {
+		text-align: center;
+		display: block;
+	}
+	.player {
+		display: inline-block;
+		width: 48%;
+	}
+	#player1 {
+		display: inline-block;
+		float: none;
+	}
+	#player2 {
+		display: inline-block;
+		float: none;
+	}
+	#question h1 {
+		display: block;
+		width: 100%;
+		margin-top: 0.25em;
+		margin-bottom: 0.25em;
+	}
+	#question h2 {
+		width: 100%;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+	#answers ul li {
+		font-size: 1.1em;
+	}
+	#answers ul .activeAnswer {
+		width: 90%;
+		border-radius: 0.75em;
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+	#answers ul .inactiveAnswer {
+		width: 90%;
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+	#counter {
+		text-align: left;
+		margin-top: 1em;
+		width: 100%;
+		margin-left: 0.3em;
+		display: inline-block;
+	}
+	#counter #remainingTime{
+		margin-top: 0em;
+		margin-bottom: 0.2em;
+	}
+	#counter meter {
+		width: 95%
+	}
+	#continue {
+		float:none;
+		margin-top: 1em;
+		width: 90%;
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		margin-right: 0px;
+	}
+	#continue button {
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+		background-size: 4%;
+		background-position: 92% 50%;
+		background-repeat: no-repeat;
 	}
 }
 
