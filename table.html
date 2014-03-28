@@ -58,34 +58,30 @@ http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 	<div id="question">
 		<h2>Welche zwei LVAs werden im Modul EWA zusammengefasst?</h2>
-		
-		<ul id="answers">
-			<li class="inactive_answer" tabindex="0">IT Strategie</li>
-			<li class="inactive_answer"	tabindex="0">Web Engineering</li>
-			<li class="inactive_answer"	tabindex="0">Semistrukturierte Daten</li>
-			<li class="inactive_answer"	tabindex="0">Objektorientiere Modellierung</li>
+	</div>
+	<div id="answers">
+		<ul>
+			<li class="inactiveAnswer" tabindex="0">IT Strategie</li>
+			<li class="inactiveAnswer"	tabindex="0">Web Engineering</li>
+			<li class="inactiveAnswer"	tabindex="0">Semistrukturierte Daten</li>
+			<li class="inactiveAnswer"	tabindex="0">Objektorientiere Modellierung</li>
 		</ul>
 
 		<script type="text/javascript">
 
 		$(document).ready(function() {
 			$('li').click(function() {
-				$(this).toggleClass('inactive_answer active_answer');
+				$(this).toggleClass('inactiveAnswer activeAnswer');
 			});
 		});
 
 		</script>
-	
-		<div id="continue">
-			<button id="continue">weiter <img src="img/white-arrow-right.png" alt="" />
-			</button>
-		</div>
-
+	</div>
 </div>
+<div id="counter">
+	<p id="remainingTime">Verbleibende Zeit: <span id="timeText">00:30</span></p>
 
-<div id="counter">Verbleibende Zeit: <span id="time_text">00:30</span>
-
-	<meter min="0" max="30" value="30" id="time_meter">Zeit</meter>
+	<meter min="0" max="30" value="30" id="timeMeter">Zeit</meter>
 	
 			<script type="text/javascript">
 	
@@ -102,16 +98,18 @@ http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 					return;
 				}
 		
-				$('#time_meter').prop('value', count);
-				$('#time_text').html(secToMMSS(count));
-		
+				$('#timeMeter').prop('value', count);
+				$('#timeText').html(secToMMSS(count));
 			}, 1000);
 		
 		});
 	
 		</script>
 
-	<span>Letztes Spiel: Nie</span>
+	<p>Letztes Spiel: Nie</p>
+</div>
+<div id="continue">
+	<button>weiter</button>
 </div>
 </section>
 <footer><span>&#169;2014 BIG Quiz</span></footer>
