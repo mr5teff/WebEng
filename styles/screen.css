@@ -76,7 +76,7 @@ footer {
 	text-align: right;
 	width: 99.7%;
 }
-#submit input {
+#submit #submitButton {
 	color: white;
 	font-weight: bold;
 	font-size: 1em;
@@ -86,10 +86,14 @@ footer {
 	padding: 0.25em;
 	border-radius: 0.25em;
 	border: solid green 1px;
+	background-color: #05F529;
 	background-image: url("../img/white-arrow-right.png");
 	background-size: 5%;
 	background-position: 92% 50%;
 	background-repeat: no-repeat;
+}
+#submit #submitButton:disabled {
+	background-color: #CFCFCF;
 }
 #registerContent form label input {
 	margin-bottom: 1.5em;
