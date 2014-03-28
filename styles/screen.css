@@ -70,6 +70,7 @@ footer {
 }
 #submit {
 	text-align: right;
+	width: 99.7%;
 }
 #submit input {
 	font-weight: bold;
