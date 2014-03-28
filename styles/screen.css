@@ -32,6 +32,7 @@ header #logo span {
 	font-weight: bold;
 } 
 header nav .navbutton {
+	color: white;
 	position: absolute;
 	display: inline;
 	text-align: center;
@@ -148,19 +149,19 @@ footer {
 	background-color: #191C61;
 	width: 48.5%;
 	border-radius: 0.75em;
-	padding-top: 1.5em;
-	padding-bottom: 1.5em;
+	padding-top: 1.25em;
+	padding-bottom: 1.25em;
 	margin: 0.25em;
 }
 #answers ul .inactiveAnswer {
-	color: #191C61; 
+	color: #191C61;
 	display: inline-block;
 	text-align: center;
 	background-color: #C5DFED;
 	width: 48.5%;
 	border-radius: 0.75em;
-	padding-top: 1.5em;
-	padding-bottom: 1.5em;
+	padding-top: 1.25em;
+	padding-bottom: 1.25em;
 	margin: 0.25em;
 }
 #player1 {
@@ -172,26 +173,28 @@ footer {
 	width: 10%;
 }
 #counter {
+	margin-top: 1em;
 	width: 48.5%;
-	margin: 0.25em;
+	margin-left: 0.3em;
 	display: inline-block;
 }
 #counter #remainingTime{
-	
+	margin-top: 0em;
 	margin-bottom: 0.2em;
 }
 #counter meter {
 	width: 100%
 }
 #continue {
-	width: 49%;
+	margin-top: 1em;
+	width: 50%;
 	display: inline-block;
 	vertical-align: top;
 	text-align: right;
-
+	margin-right: 0px;
 }
 #continue button {
-	margin-right: 0.25em;
+	margin-right: 0.15em;
 	color: white;
 	font-weight: bold;
 	font-size: 1em;
@@ -203,7 +206,7 @@ footer {
 	border: solid green 1px;
 	background-color: #05F529;
 	background-image: url("../img/white-arrow-right.png");
-	background-size: 5%;
+	background-size: 10%;
 	background-position: 92% 50%;
 	background-repeat: no-repeat;
 }
