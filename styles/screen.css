@@ -175,10 +175,11 @@ footer {
 	display: inline-block;
 	text-align: center;
 	background-color: #191C61;
-	width: 48.5%;
+	border: 2px solid #191C61;
+	width: 46%;
 	border-radius: 0.75em;
-	padding-top: 1.25em;
-	padding-bottom: 1.25em;
+	padding-top: 1.1em;
+	padding-bottom: 1.1em;
 	margin: 0.25em;
 }
 #answers ul .inactiveAnswer {
@@ -186,20 +187,22 @@ footer {
 	display: inline-block;
 	text-align: center;
 	background-color: #C5DFED;
-	width: 48.5%;
+	border: 2px solid #C5DFED;
+	width: 46%;
 	border-radius: 0.75em;
-	padding-top: 1.25em;
-	padding-bottom: 1.25em;
+	padding-top: 1.1em;
+	padding-bottom: 1.1em;
 	margin: 0.25em;
 }
-
-
-:focus {
-
+#answers ul .activeAnswer:focus {
 	border: 2px solid white;
-
 }
-
+#answers ul .inactiveAnswer:focus {
+	border: 2px solid white;
+}
+:focus {
+	border: 2px solid white;
+}
 #counter {
 	margin-top: 1em;
 	width: 48.5%;
@@ -232,12 +235,16 @@ footer {
 	width: 8em;
 	padding: 0.25em;
 	border-radius: 0.5em;
-	border: solid green 1px;
+	border: solid green 2px;
 	background-color: #05F529;
 	background-image: url("../img/white-arrow-right.png");
 	background-size: 10%;
 	background-position: 92% 50%;
 	background-repeat: no-repeat;
+}
+#continue button:focus {
+	border: solid white 2px;
+
 }
 @media (min-width: 48em) and (max-width: 64em) {
 	#registerContent {
