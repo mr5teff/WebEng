@@ -79,7 +79,6 @@ function createValidations() {
 	if(hasFormValidation()) {
 		// if Validation by form possible, set required pattern of User and Password in regex:		
 
-		document.getElementById('geburtstag').setAttribute("required", "true");
 		document.getElementById('benutzername').setAttribute("required", "true");
 		document.getElementById('benutzername').setAttribute("pattern", "[a-zA-Z0-9]{4,8}");
 		document.getElementById('benutzername').setAttribute("onkeyup", "validateByForm()");
