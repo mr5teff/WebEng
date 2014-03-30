@@ -75,14 +75,14 @@ footer {
 	border-radius: 0.25em;
 	border: 1px solid black;
 	display: inline-block;
-	width: 69%;
+	width: 67%;
 }
 #registerContent form label select {
 	display: inline-block;
 	border-radius: 0.25em;
 	padding: 0.25em;
 	border: 1px solid black;
-	width: 69%;
+	width: 67%;
 }
 #pflichtfelder {
 	text-align: center;
