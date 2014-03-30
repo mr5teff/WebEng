@@ -112,7 +112,8 @@ function createValidations() {
 function validateByForm() {
 	// Check Validity by form:
 
-	if(document.getElementById('geburtstag').checkValidity()
+	if((document.getElementById('geburtstag').checkValidity()
+	|| document.getElementById('geburtstag').value=="")
 	&& document.getElementById('benutzername').checkValidity()
 	&& document.getElementById('passwort').checkValidity()) {
 		document.getElementById("submitButton").disabled = false;
