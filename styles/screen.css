@@ -192,6 +192,14 @@ footer {
 	padding-bottom: 1.25em;
 	margin: 0.25em;
 }
+
+
+:focus {
+
+	border: 2px solid white;
+
+}
+
 #counter {
 	margin-top: 1em;
 	width: 48.5%;
