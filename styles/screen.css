@@ -31,7 +31,7 @@ header #logo span {
 	font-size: 2em;
 	font-weight: bold;
 } 
-header nav .navbutton {
+header nav a .navbutton {
 	color: white;
 	position: absolute;
 	display: inline;
@@ -100,12 +100,16 @@ footer {
 	width: 10em;
 	padding: 0.25em;
 	border-radius: 0.25em;
-	border: solid green 1px;
+	border: solid green 2px;
 	background-color: #05F529;
 	background-image: url("../img/white-arrow-right.png");
 	background-size: 5%;
 	background-position: 92% 50%;
 	background-repeat: no-repeat;
+}
+#submit #submitButton:focus {
+	border: solid white 2px;
+
 }
 #submit #submitButton:disabled {
 	background-color: #CFCFCF;
